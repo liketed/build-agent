@@ -42,5 +42,5 @@ RUN curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cl
   && tar -xf google-cloud-cli-${GCLOUD_VERSION}-linux-x86_64.tar.gz -C /usr/local/ \
   && rm google-cloud-cli-${GCLOUD_VERSION}-linux-x86_64.tar.gz
 ENV PATH="${PATH}:/usr/local/google-cloud-sdk/bin"
-USER ${user}
+RUN gcloud components update
 
